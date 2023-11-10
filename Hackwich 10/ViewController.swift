@@ -22,13 +22,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         centerMapOnLocation(location: initialLocation)
-        let restaurantOne = Restaurant(title: "Kalapawai", type: "American",
+        let restaurantOne = Restaurant(title: "American", type: "Kalapawai",
                        coordinate: CLLocationCoordinate2D(latitude: 21.346470, longitude:
                        -158.080098))
-                
+     
                 mapView.addAnnotation(restaurantOne)
-        
-    }
+        let restaurantTwo = Restaurant(title: "Local", type: "Zippys",
+                       coordinate: CLLocationCoordinate2D(latitude:  21.334481669272346, longitude:
+                        -158.0820375254561))
+                
+                mapView.addAnnotation(restaurantTwo)    }
 //part 3
     func centerMapOnLocation(location:CLLocation)
            {
@@ -39,6 +42,6 @@ class ViewController: UIViewController {
                mapView.setRegion(coordinateRegion, animated: true)
 
            }
-    
+   
 }
 
